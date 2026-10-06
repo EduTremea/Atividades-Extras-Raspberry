@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Raspberry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Painel de Status - Raspberry Pi</h1>
+
+    <div class="topo">
+        <button id="btn-atualizar">Atualizar agora</button>
+        <label>
+            <input type="checkbox" id="auto" checked> atualizar sozinho (5s)
+        </label>
+        <span id="atualizado">Ultima atualizacao: --</span>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Equipamento</h3>
+            <p id="hostname">--</p>
+            <small id="sistema">--</small>
+        </div>
+        <div class="card">
+            <h3>IP na rede</h3>
+            <p id="ip">--</p>
+        </div>
+        <div class="card">
+            <h3>Ligada ha</h3>
+            <p id="uptime">--</p>
+        </div>
+        <div class="card" id="card-cpu">
+            <h3>CPU</h3>
+            <p id="cpu">--</p>
+        </div>
+        <div class="card" id="card-temp">
+            <h3>Temperatura</h3>
+            <p id="temperatura">--</p>
+        </div>
+        <div class="card" id="card-mem">
+            <h3>Memoria</h3>
+            <p id="memoria">--</p>
+            <small id="memoria-detalhe"></small>
+        </div>
+        <div class="card" id="card-disco">
+            <h3>Disco</h3>
+            <p id="disco">--</p>
+            <small id="disco-detalhe"></small>
+        </div>
+    </div>
+
+    <p id="erro" class="erro"></p>
+
+    <h2>Historico (ultimas leituras)</h2>
+    <table>
+        <thead>
+            <tr><th>Horario</th><th>CPU</th><th>Temp</th><th>Memoria</th></tr>
+        </thead>
+        <tbody id="tabela-historico"></tbody>
+    </table>
+
+    <p class="rodape">Dados em JSON: <a href="/api/status">/api/status</a></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

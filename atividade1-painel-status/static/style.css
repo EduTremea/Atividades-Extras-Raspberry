@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #1e1e2f;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 { margin-top: 0; }
+
+.topo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #4a6cf7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover { background: #3553d1; }
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.card {
+    background: #2b2b40;
+    border-radius: 6px;
+    padding: 12px;
+    border-left: 5px solid #555;
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.card p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* cores dos indicadores */
+.ok { border-left-color: #2ecc71; }
+.atencao { border-left-color: #f1c40f; }
+.perigo { border-left-color: #e74c3c; }
+
+.erro { color: #e74c3c; }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+}
+
+th, td {
+    border-bottom: 1px solid #444;
+    padding: 6px;
+    text-align: left;
+}
+
+.rodape { margin-top: 20px; font-size: 13px; color: #888; }
+.rodape a { color: #8fa4ff; }

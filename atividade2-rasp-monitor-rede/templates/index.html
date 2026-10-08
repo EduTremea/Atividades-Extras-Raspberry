@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Rede</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Monitor de Rede - Raspberry Pi</h1>
+
+    <div class="topo">
+        <button id="btn-verificar">Verificar novamente</button>
+        <label><input type="checkbox" id="auto"> verificar a cada 30s</label>
+        <span id="carregando"></span>
+    </div>
+
+    <h2>Configuracao da rede</h2>
+    <table class="info">
+        <tr><td>Equipamento</td><td id="hostname">--</td></tr>
+        <tr><td>Interface</td><td id="interface">--</td></tr>
+        <tr><td>Tipo / estado</td><td id="tipo">--</td></tr>
+        <tr><td>IP</td><td id="ip">--</td></tr>
+        <tr><td>Mascara</td><td id="mascara">--</td></tr>
+        <tr><td>Gateway</td><td id="gateway">--</td></tr>
+        <tr><td>DNS</td><td id="dns">--</td></tr>
+        <tr><td>Ultima verificacao</td><td id="verificado">--</td></tr>
+    </table>
+
+    <h2>Testes de comunicacao</h2>
+    <table class="testes">
+        <thead>
+            <tr>
+                <th>Destino</th>
+                <th>Tipo</th>
+                <th>Status</th>
+                <th>Tempo</th>
+                <th>Media</th>
+                <th>Testado em</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-testes"></tbody>
+    </table>
+
+    <p class="legenda">
+        <span class="bolinha ok"></span> ok
+        <span class="bolinha atencao"></span> atencao (lento ou perdeu pacote)
+        <span class="bolinha falha"></span> falha
+    </p>
+
+    <p class="rodape">JSON: <a href="/api/verificar">/api/verificar</a> | <a href="/api/historico">/api/historico</a></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

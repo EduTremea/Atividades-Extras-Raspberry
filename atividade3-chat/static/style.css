@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ece5dd;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #075e54;
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 { margin: 0; font-size: 22px; }
+
+.enviar {
+    background: #fff;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea { height: 60px; resize: vertical; }
+
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #128c7e;
+    color: #fff;
+    cursor: pointer;
+}
+
+#aviso { margin: 0; font-size: 14px; }
+.aviso-ok { color: #128c7e; }
+.aviso-erro { color: #c0392b; }
+
+.abas { padding: 10px 20px 0 20px; display: flex; gap: 5px; }
+.aba { background: #aaa; }
+.aba.ativa { background: #075e54; }
+
+.lista {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.msg {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.msg.minha {
+    align-self: flex-end;
+    background: #dcf8c6;
+}
+
+.msg .quem { font-size: 12px; font-weight: bold; color: #075e54; }
+.msg .info { font-size: 11px; color: #888; margin-top: 4px; }
+.msg .falhou { color: #c0392b; }
+.msg .responder { font-size: 11px; padding: 2px 6px; margin-left: 6px; }
+
+.vazio { color: #777; }

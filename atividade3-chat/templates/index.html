@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Rasp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Chat Local</h1>
+        <span>Voce e: <b>{{ nome_grupo }}</b></span>
+    </header>
+
+    <div class="enviar">
+        <input type="text" id="destino" placeholder="IP da rasp destino (ex: 192.168.1.120 ou 192.168.1.120:5000)">
+        <textarea id="texto" placeholder="Escreva a mensagem..." maxlength="500"></textarea>
+        <button id="btn-enviar">Enviar</button>
+        <p id="aviso"></p>
+    </div>
+
+    <div class="abas">
+        <button class="aba ativa" data-aba="todas">Conversa</button>
+        <button class="aba" data-aba="recebidas">Recebidas</button>
+        <button class="aba" data-aba="enviadas">Enviadas</button>
+    </div>
+
+    <div id="lista" class="lista"></div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>

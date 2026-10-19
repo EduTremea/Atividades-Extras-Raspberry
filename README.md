@@ -282,5 +282,5 @@ Controle de acesso por cracha RFID (MFRC522) com LEDs, buzzer e relatorio em CSV
 | Integrante | Responsavel por |
 |-----------|-----------------|
 | Luiz Eduardo Tremea | Atividade 1 - Painel de Status |
-| (preencher) | Atividade 2 - Monitor de Rede |
-| (preencher) | Atividade 3 - Chat |
+| Patrick Marques | Atividade 2 - Monitor de Rede |
+| Bruno Benetti | Atividade 3 - Chat |

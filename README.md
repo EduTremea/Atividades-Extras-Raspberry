@@ -15,7 +15,8 @@ As tres aplicacoes rodam na Raspberry Pi com Python + Flask e sao acessadas pelo
 Atividades-Extras-Raspberry/
 ├── atividade1-painel-status/   -> Painel Web de Status da Raspberry Pi
 ├── atividade2-monitor-rede/    -> Monitor de Rede Local
-└── atividade3-chat/            -> Servico de Mensagens (chat entre Raspberries)
+├── atividade3-chat/            -> Servico de Mensagens (chat entre Raspberries)
+└── atividade4-rfid-sala-seguranca/ -> Controle de acesso com RFID
 ```
 
 Cada pasta e uma aplicacao separada, com seu proprio `app.py` e `requirements.txt`.
@@ -267,6 +268,12 @@ Rejeitou -> `400`
 ```
 
 **7. Identificacao:** cada mensagem tem um `id` unico (UUID v4) gerado por quem envia.
+
+---
+
+## Atividade 4 - Sala de Seguranca com RFID
+
+Controle de acesso por cracha RFID (MFRC522) com LEDs, buzzer e relatorio em CSV. Nao usa Flask: roda direto no terminal da Raspberry. Detalhes, ligacoes e como rodar no [README da pasta](atividade4-rfid-sala-seguranca/README.md).
 
 ---
 
